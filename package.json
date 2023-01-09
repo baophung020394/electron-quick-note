@@ -33,7 +33,9 @@
   "build": {
     "appId": "com.waveasean.quicknot",
     "copyright": "Copyright baophung",
-    "publish": "github",
+    "publish": {
+      "provider":"github"
+    },
     "mac": {
       "category": "public.app-category.productivity"
     },
