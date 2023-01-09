@@ -7,8 +7,8 @@
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
-    "build": "electron-builder -w --64",
-    "win-cert":"electron-builder create-self-signed-cert -p baophung"
+    "build": "electron-builder -mw",
+    "win-cert": "electron-builder create-self-signed-cert -p baophung"
   },
   "repository": "https://github.com/baophung020394/electron-quick-note",
   "homepage": "https://github.com/baophung020394/electron-quick-note",
@@ -17,7 +17,7 @@
     "Master Electron",
     "demo"
   ],
-  "author": "GitHub, Stackacademytv",
+  "author": "GitHub, baophung",
   "license": "CC0-1.0",
   "dependencies": {
     "electron-window-state": "^5.0.3"
@@ -31,14 +31,26 @@
     "appId": "com.waveasean.quicknot",
     "copyright": "Copyright baophung",
     "mac": {
-      "category": "public.app-category.productivity",
-      "target": "dmg"
+      "category": "public.app-category.developer-tools",
+      "target": [
+        "dmg",
+        "pkg"
+      ]
     },
     "win": {
       "certificateFile": "private/baophung.p12",
       "certificatePassword": "",
       "verifyUpdateCodeSignature": false,
-      "publisherName":"baophung"
+      "publisherName": "baophung",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
     },
     "linux": {
       "category": "Utility"
