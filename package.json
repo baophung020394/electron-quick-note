@@ -1,15 +1,15 @@
 {
   "name": "QuickNote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Master Electron Project",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
-    "build": "electron-builder -m",
-    "release": "electron-builder -m -p 'onTagOrDraft'",
-    "win-cert": "electron-builder create-self-signed-cert -p baophung"
+    "build": "electron-builder -mwl",
+    "release": "electron-builder -mwl -p 'onTagOrDraft'",
+    "win-cert": "electron-builder create-self-signed-cert -p baophung020394"
   },
   "repository": "https://github.com/baophung020394/electron-quick-note",
   "homepage": "https://github.com/baophung020394/electron-quick-note",
@@ -31,19 +31,19 @@
     "nodemon": "^2.0.0"
   },
   "build": {
-    "appId": "com.waveasean.quicknot",
+    "appId": "com.waveasean.quicknote",
     "copyright": "Copyright baophung",
     "publish": {
-      "provider":"github"
+      "provider": "github"
     },
     "mac": {
       "category": "public.app-category.productivity"
     },
     "win": {
-      "certificateFile": "private/baophung.p12",
+      "certificateFile": "private/baophung020394.p12",
       "certificatePassword": "",
       "verifyUpdateCodeSignature": false,
-      "publisherName": "baophung"
+      "publisherName": "baophung020394"
     },
     "linux": {
       "category": "Utility"
