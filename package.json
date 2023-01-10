@@ -1,14 +1,14 @@
 {
   "name": "QuickNote",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Master Electron Project",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
-    "build": "electron-builder -mw",
-    "release": "electron-builder -mw -p 'onTagOrDraft'",
+    "build": "electron-builder -m",
+    "release": "electron-builder -m -p 'onTagOrDraft'",
     "win-cert": "electron-builder create-self-signed-cert -p baophung"
   },
   "repository": "https://github.com/baophung020394/electron-quick-note",
@@ -43,16 +43,7 @@
       "certificateFile": "private/baophung.p12",
       "certificatePassword": "",
       "verifyUpdateCodeSignature": false,
-      "publisherName": "baophung",
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        }
-      ]
+      "publisherName": "baophung"
     },
     "linux": {
       "category": "Utility"
